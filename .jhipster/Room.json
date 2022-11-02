@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044433",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "room",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "introText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "roomName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Room",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "roomConfig",
+      "ownerSide": true,
+      "relationshipName": "location",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "door",
+      "otherEntityRelationshipName": "name",
+      "relationshipName": "door",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "challenge",
+      "otherEntityRelationshipName": "name",
+      "relationshipName": "challenge",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "floor",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "name",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

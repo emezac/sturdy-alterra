@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044423",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "pack",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "packName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deckName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "configSetup",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Pack",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "card",
+      "otherEntityRelationshipName": "pack",
+      "relationshipName": "card",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "player",
+      "otherEntityRelationshipName": "pack",
+      "relationshipName": "player",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044429",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "floor",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "floorName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Floor",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "floorConfig",
+      "ownerSide": true,
+      "relationshipName": "location",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "name",
+      "relationshipName": "room",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "dungeon",
+      "otherEntityRelationshipName": "floor",
+      "relationshipName": "name",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

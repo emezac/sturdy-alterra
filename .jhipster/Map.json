@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044427",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "map",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "mapName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Map",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "dungeon",
+      "otherEntityRelationshipName": "job",
+      "ownerSide": true,
+      "relationshipName": "task",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "game",
+      "otherEntityRelationshipName": "map",
+      "relationshipName": "game",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
