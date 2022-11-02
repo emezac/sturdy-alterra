@@ -48,6 +48,32 @@ public class CacheConfiguration {
             createCache(cm, com.sturdy.alterra.domain.User.class.getName());
             createCache(cm, com.sturdy.alterra.domain.Authority.class.getName());
             createCache(cm, com.sturdy.alterra.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.sturdy.alterra.domain.Profile.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Player.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Player.class.getName() + ".games");
+            createCache(cm, com.sturdy.alterra.domain.Player.class.getName() + ".packs");
+            createCache(cm, com.sturdy.alterra.domain.Pack.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Pack.class.getName() + ".cards");
+            createCache(cm, com.sturdy.alterra.domain.Card.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Game.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Game.class.getName() + ".maps");
+            createCache(cm, com.sturdy.alterra.domain.GameConfig.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Map.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Map.class.getName() + ".tasks");
+            createCache(cm, com.sturdy.alterra.domain.Dungeon.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Dungeon.class.getName() + ".floors");
+            createCache(cm, com.sturdy.alterra.domain.Dungeon.class.getName() + ".jobs");
+            createCache(cm, com.sturdy.alterra.domain.Floor.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Floor.class.getName() + ".rooms");
+            createCache(cm, com.sturdy.alterra.domain.FloorConfig.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Prize.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.RoomConfig.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Room.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Room.class.getName() + ".doors");
+            createCache(cm, com.sturdy.alterra.domain.Room.class.getName() + ".challenges");
+            createCache(cm, com.sturdy.alterra.domain.Challenge.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Door.class.getName());
+            createCache(cm, com.sturdy.alterra.domain.Door.class.getName() + ".prizes");
             // jhipster-needle-ehcache-add-entry
         };
     }

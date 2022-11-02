@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044426",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "game_config",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "setupDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "floorConfig",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "roomConfig",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dateInit",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateEnd",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GameConfig",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044434",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "challenge",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "introText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "challengeName",
+      "fieldType": "TypesOfChanllenge",
+      "fieldValues": "STRONG,SOURCEROUS,SWIFT"
+    },
+    {
+      "fieldName": "difficulty",
+      "fieldType": "Difficulty",
+      "fieldValues": "LOW,MEDIUM,HIGH"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Challenge",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "challenge",
+      "relationshipName": "name",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

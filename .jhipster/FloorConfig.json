@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044430",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "floor_config",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "setup",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numOfRooms",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FloorConfig",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

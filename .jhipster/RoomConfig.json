@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044432",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "room_config",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "setup",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numOfDoors",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "numOfPrizes",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RoomConfig",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

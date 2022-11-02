@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044431",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "prize",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "prizeName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pips",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "expireDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Prize",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "door",
+      "otherEntityRelationshipName": "prize",
+      "relationshipName": "name",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

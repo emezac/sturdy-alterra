@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20221102044422",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "player",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "nickName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Player",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "profile",
+      "ownerSide": true,
+      "relationshipName": "location",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "game",
+      "otherEntityRelationshipName": "player",
+      "relationshipName": "game",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "pack",
+      "otherEntityRelationshipName": "player",
+      "relationshipName": "pack",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
