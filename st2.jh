@@ -1,0 +1,139 @@
+
+
+entity Profile {
+    id UUID,
+	name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    aclSetup String
+}
+
+entity Player {
+    id UUID,
+	nickName String required
+}
+entity Pack {
+    id UUID,
+	packName String required,
+    deckName String,
+    configSetup String
+}
+
+entity Card {
+    id UUID,
+    cardName String,
+    initialPip String
+}
+
+entity Game {
+    id UUID,
+	gameName String required,
+    description String,
+    moves String
+}
+
+entity GameConfig {
+	id UUID,
+    setupDate Instant,
+    floorConfig Long,
+    roomConfig Long,
+    dateInit Instant,
+    dateEnd Instant
+}
+
+entity Map {
+    id UUID,
+	mapName String required,
+    description String
+}
+
+entity Dungeon {
+    id UUID,
+    dungeonName String required,
+	startDate Instant,
+	endDate Instant
+}
+
+entity Floor {
+    id UUID,
+	floorName String required
+}
+
+entity FloorConfig {
+    id UUID,
+	setup String required,
+    numOfRooms Long
+}
+
+entity Prize {
+    id UUID,
+	prizeName String required,
+    pips Long,
+    expireDate Instant
+}
+
+entity RoomConfig {
+    id UUID,
+	setup String,
+	numOfDoors Long,
+    numOfPrizes Long
+}
+
+entity Room {
+    id UUID,
+	introText String,
+	roomName String required
+}
+
+entity Challenge {
+    id UUID,
+	introText String required,
+    challengeName TypesOfChanllenge,
+    difficulty Difficulty
+}
+
+enum TypesOfChanllenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+entity Door {
+    id UUID,
+	doorName String required
+}
+
+relationship OneToOne {
+	Player{location} to Profile
+}
+
+relationship OneToOne {
+	Floor{location} to FloorConfig
+}
+
+relationship OneToOne {
+	Room{location} to RoomConfig
+}
+
+relationship OneToOne {
+	Game{location} to GameConfig
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    Room to Door{name},
+	Dungeon to Floor{name},
+	Floor to Room{name},
+    Room to Challenge{name},
+    Door to Prize{name},
+    Game to Map,
+    Player to Game,
+    Player to Pack,
+    Pack to Card
+}
+
+relationship ManyToMany {
+	Map{task(title)} to Dungeon{job}
+}
